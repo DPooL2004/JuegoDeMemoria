@@ -20,7 +20,7 @@ body{
 
 .pantalla{
     display: flex;
-    align-items: end;
+    flex-direction: column;
     border: solid 4px #ffc600;
     height: 90%;
     width: 90%;
