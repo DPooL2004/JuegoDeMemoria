@@ -15,6 +15,23 @@ let card14 = document.getElementById('Card14')
 let card15 = document.getElementById('Card15')
 let card16 = document.getElementById('Card16')
 
+let imagen = document.getElementById('imagen')
+let imagen2 = document.getElementById('imagen2')
+let imagen3 = document.getElementById('imagen3')
+let imagen4 = document.getElementById('imagen4')
+let imagen5 = document.getElementById('imagen5')
+let imagen6 = document.getElementById('imagen6')
+let imagen7 = document.getElementById('imagen7')
+let imagen8 = document.getElementById('imagen8')
+let imagen9 = document.getElementById('imagen9')
+let imagen10 = document.getElementById('imagen10')
+let imagen11 = document.getElementById('imagen11')
+let imagen12 = document.getElementById('imagen12')
+let imagen13 = document.getElementById('imagen13')
+let imagen14 = document.getElementById('imagen14')
+let imagen15 = document.getElementById('imagen15')
+let imagen16 = document.getElementById('imagen16')
+
 
 card.addEventListener('click', quitarFondo)
 card2.addEventListener('click', quitarFondo2)
@@ -36,50 +53,57 @@ card16.addEventListener('click', quitarFondo16)
 
 
 function quitarFondo(){
-    document.getElementById('imagen').setAttribute("src", " ")
+    imagen.classList.toggle("back2")
 }
 function quitarFondo2(){
-    document.getElementById('imagen2').setAttribute("src", " ")
+    imagen2.classList.toggle('back3')
 }
 function quitarFondo3(){
-    document.getElementById('imagen3').setAttribute("src", " ")
+    imagen3.classList.toggle("back2")
 }
 function quitarFondo4(){
-    document.getElementById('imagen4').setAttribute("src", " ")
+    imagen4.classList.toggle('back3')
 }
 function quitarFondo5(){
-    document.getElementById('imagen5').setAttribute("src", " ")
+    imagen5.classList.toggle("back2")
 }
 function quitarFondo6(){
-    document.getElementById('imagen6').setAttribute("src", " ")
+    imagen6.classList.toggle('back3')
 }
 function quitarFondo7(){
-    document.getElementById('imagen7').setAttribute("src", " ")
+    imagen7.classList.toggle("back3")
 }
 function quitarFondo8(){
-    document.getElementById('imagen8').setAttribute("src", " ")
+    imagen8.classList.toggle('back2')
 }
 function quitarFondo9(){
-    document.getElementById('imagen9').setAttribute("src", " ")
+    imagen9.classList.toggle("back3")
 }
 function quitarFondo10(){
-    document.getElementById('imagen10').setAttribute("src", " ")
+
+    imagen10.classList.toggle('back2')
 }
 function quitarFondo11(){
-    document.getElementById('imagen11').setAttribute("src", " ")
+
+    imagen11.classList.toggle("back3")
 }
 function quitarFondo12(){
-    document.getElementById('imagen12').setAttribute("src", " ")
+
+    imagen12.classList.toggle('back2')
 }
 function quitarFondo13(){
-    document.getElementById('imagen13').setAttribute("src", " ")
+
+    imagen13.classList.toggle("back3")
 }
 function quitarFondo14(){
-    document.getElementById('imagen14').setAttribute("src", " ")
+
+    imagen14.classList.toggle('back2')
 }
 function quitarFondo15(){
-    document.getElementById('imagen15').setAttribute("src", " ")
+
+    imagen15.classList.toggle("back3")
 }
 function quitarFondo16(){
-    document.getElementById('imagen16').setAttribute("src", " ")
+
+    imagen16.classList.toggle('back2')
 }
