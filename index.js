@@ -44,6 +44,40 @@ let imagen16 = document.getElementById('imagen16')
 boton.addEventListener('click', animaciones)
 
 
+let cardText = card.querySelector('.contenidoCard span').textContent
+let cardText2 = card2.querySelector('.contenidoCard span').textContent
+let cardText3 = card3.querySelector('.contenidoCard span').textContent
+let cardText4 = card4.querySelector('.contenidoCard span').textContent
+let cardText5 = card5.querySelector('.contenidoCard span').textContent
+let cardText6 = card6.querySelector('.contenidoCard span').textContent
+let cardText7 = card7.querySelector('.contenidoCard span').textContent
+let cardText8 = card8.querySelector('.contenidoCard span').textContent
+let cardText9 = card9.querySelector('.contenidoCard span').textContent
+let cardText10 = card10.querySelector('.contenidoCard span').textContent
+let cardText11 = card11.querySelector('.contenidoCard span').textContent
+let cardText12 = card12.querySelector('.contenidoCard span').textContent
+let cardText13 = card13.querySelector('.contenidoCard span').textContent
+let cardText14 = card14.querySelector('.contenidoCard span').textContent
+let cardText15 = card15.querySelector('.contenidoCard span').textContent
+let cardText16 = card16.querySelector('.contenidoCard span').textContent
+
+console.log(cardText)
+console.log(cardText2)
+console.log(cardText3)
+console.log(cardText4)
+console.log(cardText5)
+console.log(cardText6)
+console.log(cardText7)
+console.log(cardText8)
+console.log(cardText9)
+console.log(cardText10)
+console.log(cardText11)
+console.log(cardText12)
+console.log(cardText13)
+console.log(cardText14)
+console.log(cardText15)
+console.log(cardText16)
+
 let cardv = document.getElementById('Card').dataset.value
 let card2v = document.getElementById('Card2').dataset.value
 let card3v = document.getElementById('Card3').dataset.value
@@ -63,22 +97,26 @@ let card16v = document.getElementById('Card16').dataset.value
 
 
 function animaciones(){
-    imagen.classList.toggle("respaldo")
-    imagen2.classList.toggle('respaldo')
-    imagen3.classList.toggle("respaldo")
-    imagen4.classList.toggle('respaldo')
-    imagen5.classList.toggle("respaldo")
-    imagen6.classList.toggle('respaldo')
-    imagen7.classList.toggle("respaldo")
-    imagen8.classList.toggle('respaldo')
-    imagen9.classList.toggle("respaldo")
-    imagen10.classList.toggle('respaldo')
-    imagen11.classList.toggle("respaldo")
-    imagen12.classList.toggle('respaldo')
-    imagen13.classList.toggle("respaldo")
-    imagen14.classList.toggle('respaldo')
-    imagen15.classList.toggle("respaldo")
-    imagen16.classList.toggle("respaldo")
+    function ponerFondo(imagen){
+        imagen.classList.toggle("respaldo")
+    }
+
+    ponerFondo(imagen)
+    ponerFondo(imagen2)
+    ponerFondo(imagen3)
+    ponerFondo(imagen4)
+    ponerFondo(imagen5)
+    ponerFondo(imagen6)
+    ponerFondo(imagen7)
+    ponerFondo(imagen8)
+    ponerFondo(imagen9)
+    ponerFondo(imagen10)
+    ponerFondo(imagen11)
+    ponerFondo(imagen12)
+    ponerFondo(imagen13)
+    ponerFondo(imagen14)
+    ponerFondo(imagen15)
+    ponerFondo(imagen16)
 
     card.addEventListener('click', quitarFondo)
     card2.addEventListener('click', quitarFondo2)
@@ -100,59 +138,59 @@ function animaciones(){
 
 
     function quitarFondo(){
-        imagen.classList.toggle("back2")
+        imagen.classList.add("back3")
     }
     function quitarFondo2(){
-        imagen2.classList.toggle('back3')
+        imagen2.classList.add('back3')
     }
     function quitarFondo3(){
-        imagen3.classList.toggle("back2")
+        imagen3.classList.add("back3")
     }
     function quitarFondo4(){
-        imagen4.classList.toggle('back3')
+        imagen4.classList.add('back3')
     }
     function quitarFondo5(){
-        imagen5.classList.toggle("back2")
+        imagen5.classList.add("back3")
     }
     function quitarFondo6(){
-        imagen6.classList.toggle('back3')
+        imagen6.classList.add('back3')
     }
     function quitarFondo7(){
-        imagen7.classList.toggle("back3")
+        imagen7.classList.add("back3")
     }
     function quitarFondo8(){
-        imagen8.classList.toggle('back2')
+        imagen8.classList.add('back3')
     }
     function quitarFondo9(){
-        imagen9.classList.toggle("back3")
+        imagen9.classList.add("back3")
     }
     function quitarFondo10(){
     
-        imagen10.classList.toggle('back2')
+        imagen10.classList.add('back3')
     }
     function quitarFondo11(){
     
-        imagen11.classList.toggle("back3")
+        imagen11.classList.add("back3")
     }
     function quitarFondo12(){
     
-        imagen12.classList.toggle('back2')
+        imagen12.classList.add('back3')
     }
     function quitarFondo13(){
     
-        imagen13.classList.toggle("back3")
+        imagen13.classList.add("back3")
     }
     function quitarFondo14(){
     
-        imagen14.classList.toggle('back2')
+        imagen14.classList.add('back3')
     }
     function quitarFondo15(){
     
-        imagen15.classList.toggle("back3")
+        imagen15.classList.add("back3")
     }
     function quitarFondo16(){
     
-        imagen16.classList.toggle('back2')
+        imagen16.classList.add('back3')
     }
 
     let tiempo = 60
@@ -202,7 +240,7 @@ function animaciones(){
     card16.addEventListener('click', mostrarCard16)
 
     function validacion(value1, value2){
-        console.log("1: "+value1 + " 2: "+ value2)
+        console.log("primer valor: "+value1 + "\nsegundo valor: "+ value2)
 
         if((tarjetasDestapadas==2)&&(value1 == value2)){
             alert("Son iguales")
@@ -210,36 +248,34 @@ function animaciones(){
             puntaje.innerHTML = aciertos
             tarjetasDestapadas = 0
         }else if((tarjetasDestapadas==2)&&(value1 != value2)){
-            alert("Son Diferetes")
             tarjetasDestapadas = 0
-
-            let div1 = document.querySelector(`[data-value="${value1}"]`)
-            let id = div1.id
-            let div2 = document.querySelector(`[data-value="${value2}"]`)
-            let id2 = div2.id
-
-            let divImagen1 = document.getElementById(id)
-            let divImagen2 = document.getElementById(id2)
-
-            let img1 = divImagen1.querySelector('.contenidoCard img:nth-child(2)')
-            let img1ID = img1.getAttribute('id')
-
-            let img2 = divImagen2.querySelector('.contenidoCard img:nth-child(2)')
-            let img2ID = img2.getAttribute('id')
-
-            console.log("Primera id: " + img1ID +" Segunda id: "+ img2ID)
-
+            alert("Son Diferentes")
+            
+            quitarFondoDeLaCarta(tarjetaDestapada1)
+            quitarFondoDeLaCarta(tarjetaDestapada2)
 
         }
+            function quitarFondoDeLaCarta(carta) {
+                // Busca la carta por su valor (data-value)
+                let cartaElement = document.querySelector(`[data-value="${carta}"]`);
+                if (cartaElement) {
+                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.remove("back3");
+                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.add("respaldo"); // Eliminar back3 del img de la carta
+                }
+            }
     }
 
     function mostrarCard(){
         tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = cardv
+            tarjetaResult1 = cardText
+            tarjetaDestapada1 = cardv
         }
         if(tarjetasDestapadas == 2){
-            tarjetaResult2 = cardv
+            tarjetaResult2 = cardText
+            tarjetaDestapada2 = cardv
         }
         validacion(tarjetaResult1, tarjetaResult2, )
     }
@@ -247,11 +283,13 @@ function animaciones(){
     function mostrarCard2(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card2v)
+        console.log(cardText2)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card2v
+            tarjetaResult1 = cardText2
+            tarjetaDestapada1 = card2v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card2v
+            tarjetaResult2 = cardText2
+            tarjetaDestapada2 = card2v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -259,11 +297,13 @@ function animaciones(){
     function mostrarCard3(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card3v)
+        console.log(cardText3)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card3v
+            tarjetaResult1 = cardText3
+            tarjetaDestapada1 = card3v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card3v
+            tarjetaResult2 = cardText3
+            tarjetaDestapada2 = card3v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -271,11 +311,13 @@ function animaciones(){
     function mostrarCard4(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card4v)
+        console.log(cardText4)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card4v
+            tarjetaResult1 = cardText4
+            tarjetaDestapada1 = card4v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card4v
+            tarjetaResult2 = cardText4
+            tarjetaDestapada2 = card4v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -283,11 +325,13 @@ function animaciones(){
     function mostrarCard5(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card5v)
+        console.log(cardText5)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card5v
+            tarjetaResult1 = cardText5
+            tarjetaDestapada1 = card5v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card5v
+            tarjetaResult2 = cardText5
+            tarjetaDestapada2 = card5v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -295,11 +339,13 @@ function animaciones(){
     function mostrarCard6(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card6v)
+        console.log(cardText6)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card6v
+            tarjetaResult1 = cardText6
+            tarjetaDestapada1 = card6v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card6v
+            tarjetaResult2 = cardText6
+            tarjetaDestapada2 = card6v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -307,11 +353,13 @@ function animaciones(){
     function mostrarCard7(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card7v)
+        console.log(cardText7)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card7v
+            tarjetaResult1 = cardText7
+            tarjetaDestapada1 = card7v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card7v
+            tarjetaResult2 = cardText7
+            tarjetaDestapada2 = card7v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -319,11 +367,13 @@ function animaciones(){
     function mostrarCard8(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
-        console.log(card8v)
+        console.log(cardText8)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card8v
+            tarjetaResult1 = cardText8
+            tarjetaDestapada1 = card8v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card8v
+            tarjetaResult2 = cardText8
+            tarjetaDestapada2 = card8v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -331,10 +381,13 @@ function animaciones(){
     function mostrarCard9(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText9)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card9v
+            tarjetaResult1 = cardText9
+            tarjetaDestapada1 = card9v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card9v
+            tarjetaResult2 = cardText9
+            tarjetaDestapada2 = card9v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -342,10 +395,13 @@ function animaciones(){
     function mostrarCard10(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText10)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card10v
+            tarjetaResult1 = cardText10
+            tarjetaDestapada1 = card10v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card10v
+            tarjetaResult2 = cardText10
+            tarjetaDestapada2 = card10v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -353,10 +409,13 @@ function animaciones(){
     function mostrarCard11(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText11)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card11v
+            tarjetaResult1 = cardText11
+            tarjetaDestapada1 = card11v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card11v
+            tarjetaResult2 = cardText11
+            tarjetaDestapada2 = card11v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -364,10 +423,13 @@ function animaciones(){
     function mostrarCard12(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText12)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card12v
+            tarjetaResult1 = cardText12
+            tarjetaDestapada1 = card12v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card12v
+            tarjetaResult2 = cardText12
+            tarjetaDestapada2 = card12v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -375,10 +437,13 @@ function animaciones(){
     function mostrarCard13(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText13)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card13v
+            tarjetaResult1 = cardText13
+            tarjetaDestapada1 = card13v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card13v
+            tarjetaResult2 = cardText13
+            tarjetaDestapada2 = card13v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -386,10 +451,13 @@ function animaciones(){
     function mostrarCard14(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText14)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card14v
+            tarjetaResult1 = cardText14
+            tarjetaDestapada1 = card14v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card14v
+            tarjetaResult2 = cardText14
+            tarjetaDestapada2 = card14v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -397,10 +465,13 @@ function animaciones(){
     function mostrarCard15(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText15)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card15v
+            tarjetaResult1 = cardText15
+            tarjetaDestapada1 = card15v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card15v
+            tarjetaResult2 = cardText15
+            tarjetaDestapada2 = card15v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
@@ -408,10 +479,13 @@ function animaciones(){
     function mostrarCard16(){
         tarjetasDestapadas++
         console.log("destapdas" + tarjetasDestapadas)
+        console.log(cardText16)
         if(tarjetasDestapadas == 1){
-            tarjetaResult1 = card16v
+            tarjetaResult1 = cardText16
+            tarjetaDestapada1 = card16v
         }else if(tarjetasDestapadas == 2){
-            tarjetaResult2 = card16v
+            tarjetaResult2 = cardText16
+            tarjetaDestapada2 = card16v
         }
         validacion(tarjetaResult1, tarjetaResult2)
     }
