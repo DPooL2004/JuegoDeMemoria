@@ -159,8 +159,27 @@ background: linear-gradient(90deg, rgba(255,208,0,1) 0%, rgba(255,221,0,1) 48%, 
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    animation: ponerFondo1 4s;
+    animation: ponerFondo1 3s;
 }
+
+.contenidoCard .respaldo2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    animation: ponerFondo2 .2s;
+}
+
+@keyframes ponerFondo2{
+    0%{
+        height: 8%;
+        border-radius: 15px 15px 0 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
 
 @keyframes ponerFondo1{
     0%{

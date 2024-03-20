@@ -177,31 +177,242 @@ function animaciones(){
     }
 
     // Comparacion Cards
-    card.addEventListener('click', mostrarCard(cardv))
-    card9.addEventListener('click', mostrarCard(cardv))
-    card2.addEventListener('click', mostrarCard2(card2v))
-    card10.addEventListener('click', mostrarCard2(card2v))
-    
-    function mostrarCard(value){
-        tarjetasDestapadas++
-        console.log("destapdas"+tarjetasDestapadas)
-        console.log(value)
-        return value
-    }
+    card.addEventListener('click', mostrarCard)
+    card9.addEventListener('click', mostrarCard9)
 
-    function mostrarCard2(value){
-        tarjetasDestapadas++
-        console.log("destapdas"+tarjetasDestapadas)
-        console.log(value)
-        return value
-    }
+    card2.addEventListener('click', mostrarCard2)
+    card10.addEventListener('click', mostrarCard10)
+
+    card3.addEventListener('click', mostrarCard3)
+    card12.addEventListener('click', mostrarCard12)
+
+    card4.addEventListener('click', mostrarCard4)
+    card11.addEventListener('click', mostrarCard11)
+
+    card5.addEventListener('click', mostrarCard5)
+    card14.addEventListener('click', mostrarCard14)
+
+    card6.addEventListener('click', mostrarCard6)
+    card13.addEventListener('click', mostrarCard13)
+
+    card7.addEventListener('click', mostrarCard7)
+    card15.addEventListener('click', mostrarCard15)
+
+    card8.addEventListener('click', mostrarCard8)
+    card16.addEventListener('click', mostrarCard16)
 
     function validacion(value1, value2){
+        console.log("1: "+value1 + " 2: "+ value2)
 
+        if((tarjetasDestapadas==2)&&(value1 == value2)){
+            alert("Son iguales")
+            aciertos++
+            puntaje.innerHTML = aciertos
+            tarjetasDestapadas = 0
+        }else if((tarjetasDestapadas==2)&&(value1 != value2)){
+            alert("Son Diferetes")
+            tarjetasDestapadas = 0
+
+            let div1 = document.querySelector(`[data-value="${value1}"]`)
+            let id = div1.id
+            let div2 = document.querySelector(`[data-value="${value2}"]`)
+            let id2 = div2.id
+
+            let divImagen1 = document.getElementById(id)
+            let divImagen2 = document.getElementById(id2)
+
+            let img1 = divImagen1.querySelector('.contenidoCard img:nth-child(2)')
+            let img1ID = img1.getAttribute('id')
+
+            let img2 = divImagen2.querySelector('.contenidoCard img:nth-child(2)')
+            let img2ID = img2.getAttribute('id')
+
+            console.log("Primera id: " + img1ID +" Segunda id: "+ img2ID)
+
+
+        }
     }
 
-    
+    function mostrarCard(){
+        tarjetasDestapadas++
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = cardv
+        }
+        if(tarjetasDestapadas == 2){
+            tarjetaResult2 = cardv
+        }
+        validacion(tarjetaResult1, tarjetaResult2, )
+    }
 
+    function mostrarCard2(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card2v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card2v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card2v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
 
+    function mostrarCard3(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card3v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card3v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card3v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
 
+    function mostrarCard4(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card4v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card4v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card4v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard5(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card5v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card5v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card5v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard6(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card6v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card6v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card6v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard7(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card7v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card7v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card7v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard8(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        console.log(card8v)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card8v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card8v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard9(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card9v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card9v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard10(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card10v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card10v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard11(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card11v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card11v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard12(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card12v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card12v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard13(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card13v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card13v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard14(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card14v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card14v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard15(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card15v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card15v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
+
+    function mostrarCard16(){
+        tarjetasDestapadas++
+        console.log("destapdas" + tarjetasDestapadas)
+        if(tarjetasDestapadas == 1){
+            tarjetaResult1 = card16v
+        }else if(tarjetasDestapadas == 2){
+            tarjetaResult2 = card16v
+        }
+        validacion(tarjetaResult1, tarjetaResult2)
+    }
 }
