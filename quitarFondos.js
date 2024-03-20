@@ -1,3 +1,5 @@
+let boton = document.getElementById('botonJugar')
+
 let card = document.getElementById('Card')
 let card2 = document.getElementById('Card2')
 let card3 = document.getElementById('Card3')
@@ -106,4 +108,27 @@ function quitarFondo15(){
 function quitarFondo16(){
 
     imagen16.classList.toggle('back2')
+}
+
+
+boton.addEventListener('click', ponerFondo)
+
+
+function ponerFondo(){
+    imagen.classList.toggle("respaldo")
+    imagen2.classList.toggle('respaldo')
+    imagen3.classList.toggle("respaldo")
+    imagen4.classList.toggle('respaldo')
+    imagen5.classList.toggle("respaldo")
+    imagen6.classList.toggle('respaldo')
+    imagen7.classList.toggle("respaldo")
+    imagen8.classList.toggle('respaldo')
+    imagen9.classList.toggle("respaldo")
+    imagen10.classList.toggle('respaldo')
+    imagen11.classList.toggle("respaldo")
+    imagen12.classList.toggle('respaldo')
+    imagen13.classList.toggle("respaldo")
+    imagen14.classList.toggle('respaldo')
+    imagen15.classList.toggle("respaldo")
+    imagen16.classList.toggle("respaldo")
 }

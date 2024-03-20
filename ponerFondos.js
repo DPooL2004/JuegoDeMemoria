@@ -1,3 +1,6 @@
+let boton = document.getElementById('botonJugar')
+let txt = document.getElementById('txt')
+
 let card = document.getElementById('Card')
 let card2 = document.getElementById('Card2')
 let card3 = document.getElementById('Card3')
@@ -32,27 +35,31 @@ let imagen14 = document.getElementById('imagen14')
 let imagen15 = document.getElementById('imagen15')
 let imagen16 = document.getElementById('imagen16')
 
-let botonJugar = document.getElementById('botonJugar')
-let cuerpo = document.body
+boton.addEventListener('click', botoncito)
 
-botonJugar.addEventListener('click', ponerFondo)
+function botoncito(){
+    txt.innerHTML = "hola"
+}
 
 function ponerFondo(){
-    imagen.classList.toggle("respaldo")
-    imagen2.classList.toggle('respaldo')
-    imagen3.classList.toggle("respaldo")
-    imagen4.classList.toggle('respaldo')
-    imagen5.classList.toggle("respaldo")
-    imagen6.classList.toggle('respaldo')
-    imagen7.classList.toggle("respaldo")
-    imagen8.classList.toggle('respaldo')
-    imagen9.classList.toggle("respaldo")
-    imagen10.classList.toggle('respaldo')
-    imagen11.classList.toggle("respaldo")
-    imagen12.classList.toggle('respaldo')
-    imagen13.classList.toggle("respaldo")
-    imagen14.classList.toggle('respaldo')
-    imagen15.classList.toggle("respaldo")
-    imagen16.classList.toggle('respaldo')
+    alert("Hola")
+    txt.innerHTML = "hola"
+    // document.getElementById('imagen').setAttribute('src', " ")
+    // imagen.classList.toggle("respaldo")
+    // imagen2.classList.toggle('respaldo')
+    // imagen3.classList.toggle("respaldo")
+    // imagen4.classList.toggle('respaldo')
+    // imagen5.classList.toggle("respaldo")
+    // imagen6.classList.toggle('respaldo')
+    // imagen7.classList.toggle("respaldo")
+    // imagen8.classList.toggle('respaldo')
+    // imagen9.classList.toggle("respaldo")
+    // imagen10.classList.toggle('respaldo')
+    // imagen11.classList.toggle("respaldo")
+    // imagen12.classList.toggle('respaldo')
+    // imagen13.classList.toggle("respaldo")
+    // imagen14.classList.toggle('respaldo')
+    // imagen15.classList.toggle("respaldo")
+    // imagen16.classList.toggle('respaldo')
 }
 
