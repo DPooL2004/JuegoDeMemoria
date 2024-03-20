@@ -26,6 +26,7 @@ body{
     width: 90%;
     background-color: #202020;
     border-radius: 20px;
+    position: relative;
 }
 
 .botonJuego{
@@ -53,6 +54,8 @@ body{
 }
 
 .controladores{
+    position: absolute;
+    bottom: 0;
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
@@ -60,7 +63,7 @@ body{
     border-radius: 0px 0px 14px 14px;
     background-color: #0b0c0c;
     width: 100%;
-    height: 30%;
+    height: 80px;
 }
 
 .cronometro span:first-child{
