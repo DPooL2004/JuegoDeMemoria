@@ -1,4 +1,11 @@
 let boton = document.getElementById('botonJugar')
+let puntaje = document.getElementById('score')
+let aciertos = 0
+let tarjetasDestapadas = 0
+let tarjetaDestapada1 = null
+let tarjetaDestapada2 = null
+let tarjetaResult1 = null
+let tarjetaResult2 = null
 
 let card = document.getElementById('Card')
 let card2 = document.getElementById('Card2')
@@ -36,6 +43,25 @@ let imagen16 = document.getElementById('imagen16')
 
 boton.addEventListener('click', animaciones)
 
+
+let cardv = document.getElementById('Card').dataset.value
+let card2v = document.getElementById('Card2').dataset.value
+let card3v = document.getElementById('Card3').dataset.value
+let card4v = document.getElementById('Card4').dataset.value
+let card5v = document.getElementById('Card5').dataset.value
+let card6v = document.getElementById('Card6').dataset.value
+let card7v = document.getElementById('Card7').dataset.value
+let card8v = document.getElementById('Card8').dataset.value
+let card9v = document.getElementById('Card9').dataset.value
+let card10v = document.getElementById('Card10').dataset.value
+let card11v = document.getElementById('Card11').dataset.value
+let card12v = document.getElementById('Card12').dataset.value
+let card13v = document.getElementById('Card13').dataset.value
+let card14v = document.getElementById('Card14').dataset.value
+let card15v = document.getElementById('Card15').dataset.value
+let card16v = document.getElementById('Card16').dataset.value
+
+
 function animaciones(){
     imagen.classList.toggle("respaldo")
     imagen2.classList.toggle('respaldo')
@@ -70,6 +96,8 @@ function animaciones(){
     card14.addEventListener('click', quitarFondo14)
     card15.addEventListener('click', quitarFondo15)
     card16.addEventListener('click', quitarFondo16)
+
+
 
     function quitarFondo(){
         imagen.classList.toggle("back2")
@@ -147,4 +175,33 @@ function animaciones(){
             }
         },1000)
     }
+
+    // Comparacion Cards
+    card.addEventListener('click', mostrarCard(cardv))
+    card9.addEventListener('click', mostrarCard(cardv))
+    card2.addEventListener('click', mostrarCard2(card2v))
+    card10.addEventListener('click', mostrarCard2(card2v))
+    
+    function mostrarCard(value){
+        tarjetasDestapadas++
+        console.log("destapdas"+tarjetasDestapadas)
+        console.log(value)
+        return value
+    }
+
+    function mostrarCard2(value){
+        tarjetasDestapadas++
+        console.log("destapdas"+tarjetasDestapadas)
+        console.log(value)
+        return value
+    }
+
+    function validacion(value1, value2){
+
+    }
+
+    
+
+
+
 }
