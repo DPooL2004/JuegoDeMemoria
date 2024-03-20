@@ -1,4 +1,4 @@
-let tiempo = 5
+let tiempo = 60
 let temporizador = document.getElementById('temporizador')
 let time = false;
 let finTime = null
