@@ -34,87 +34,9 @@ let imagen14 = document.getElementById('imagen14')
 let imagen15 = document.getElementById('imagen15')
 let imagen16 = document.getElementById('imagen16')
 
+boton.addEventListener('click', animaciones)
 
-card.addEventListener('click', quitarFondo)
-card2.addEventListener('click', quitarFondo2)
-card3.addEventListener('click', quitarFondo3)
-card4.addEventListener('click', quitarFondo4)
-card5.addEventListener('click', quitarFondo5)
-card6.addEventListener('click', quitarFondo6)
-card7.addEventListener('click', quitarFondo7)
-card8.addEventListener('click', quitarFondo8)
-card9.addEventListener('click', quitarFondo9)
-card10.addEventListener('click', quitarFondo10)
-card11.addEventListener('click', quitarFondo11)
-card12.addEventListener('click', quitarFondo12)
-card13.addEventListener('click', quitarFondo13)
-card14.addEventListener('click', quitarFondo14)
-card15.addEventListener('click', quitarFondo15)
-card16.addEventListener('click', quitarFondo16)
-
-
-
-function quitarFondo(){
-    imagen.classList.toggle("back2")
-}
-function quitarFondo2(){
-    imagen2.classList.toggle('back3')
-}
-function quitarFondo3(){
-    imagen3.classList.toggle("back2")
-}
-function quitarFondo4(){
-    imagen4.classList.toggle('back3')
-}
-function quitarFondo5(){
-    imagen5.classList.toggle("back2")
-}
-function quitarFondo6(){
-    imagen6.classList.toggle('back3')
-}
-function quitarFondo7(){
-    imagen7.classList.toggle("back3")
-}
-function quitarFondo8(){
-    imagen8.classList.toggle('back2')
-}
-function quitarFondo9(){
-    imagen9.classList.toggle("back3")
-}
-function quitarFondo10(){
-
-    imagen10.classList.toggle('back2')
-}
-function quitarFondo11(){
-
-    imagen11.classList.toggle("back3")
-}
-function quitarFondo12(){
-
-    imagen12.classList.toggle('back2')
-}
-function quitarFondo13(){
-
-    imagen13.classList.toggle("back3")
-}
-function quitarFondo14(){
-
-    imagen14.classList.toggle('back2')
-}
-function quitarFondo15(){
-
-    imagen15.classList.toggle("back3")
-}
-function quitarFondo16(){
-
-    imagen16.classList.toggle('back2')
-}
-
-
-boton.addEventListener('click', ponerFondo)
-
-
-function ponerFondo(){
+function animaciones(){
     imagen.classList.toggle("respaldo")
     imagen2.classList.toggle('respaldo')
     imagen3.classList.toggle("respaldo")
@@ -131,4 +53,98 @@ function ponerFondo(){
     imagen14.classList.toggle('respaldo')
     imagen15.classList.toggle("respaldo")
     imagen16.classList.toggle("respaldo")
+
+    card.addEventListener('click', quitarFondo)
+    card2.addEventListener('click', quitarFondo2)
+    card3.addEventListener('click', quitarFondo3)
+    card4.addEventListener('click', quitarFondo4)
+    card5.addEventListener('click', quitarFondo5)
+    card6.addEventListener('click', quitarFondo6)
+    card7.addEventListener('click', quitarFondo7)
+    card8.addEventListener('click', quitarFondo8)
+    card9.addEventListener('click', quitarFondo9)
+    card10.addEventListener('click', quitarFondo10)
+    card11.addEventListener('click', quitarFondo11)
+    card12.addEventListener('click', quitarFondo12)
+    card13.addEventListener('click', quitarFondo13)
+    card14.addEventListener('click', quitarFondo14)
+    card15.addEventListener('click', quitarFondo15)
+    card16.addEventListener('click', quitarFondo16)
+
+    function quitarFondo(){
+        imagen.classList.toggle("back2")
+    }
+    function quitarFondo2(){
+        imagen2.classList.toggle('back3')
+    }
+    function quitarFondo3(){
+        imagen3.classList.toggle("back2")
+    }
+    function quitarFondo4(){
+        imagen4.classList.toggle('back3')
+    }
+    function quitarFondo5(){
+        imagen5.classList.toggle("back2")
+    }
+    function quitarFondo6(){
+        imagen6.classList.toggle('back3')
+    }
+    function quitarFondo7(){
+        imagen7.classList.toggle("back3")
+    }
+    function quitarFondo8(){
+        imagen8.classList.toggle('back2')
+    }
+    function quitarFondo9(){
+        imagen9.classList.toggle("back3")
+    }
+    function quitarFondo10(){
+    
+        imagen10.classList.toggle('back2')
+    }
+    function quitarFondo11(){
+    
+        imagen11.classList.toggle("back3")
+    }
+    function quitarFondo12(){
+    
+        imagen12.classList.toggle('back2')
+    }
+    function quitarFondo13(){
+    
+        imagen13.classList.toggle("back3")
+    }
+    function quitarFondo14(){
+    
+        imagen14.classList.toggle('back2')
+    }
+    function quitarFondo15(){
+    
+        imagen15.classList.toggle("back3")
+    }
+    function quitarFondo16(){
+    
+        imagen16.classList.toggle('back2')
+    }
+
+    let tiempo = 60
+    let temporizador = document.getElementById('temporizador')
+    let time = false;
+    let finTime = null
+
+    if(time==false){
+        tiempoJuego();
+        time = true;
+    }
+
+    function tiempoJuego(){
+        finTime = setInterval(()=>{
+            tiempo--;
+            temporizador.innerHTML = ` ${tiempo} segundos`;
+            if (tiempo==0){
+                clearInterval(finTime);
+                alert('Se acabo el tiempo!')
+            }
+        },1000)
+    }
 }
