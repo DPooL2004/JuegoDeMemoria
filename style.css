@@ -61,8 +61,6 @@ body{
 
 /* Cards */
 
-
-
 .juego{
     padding: 10px;
 }
@@ -71,6 +69,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 /*Respaldo*/
@@ -90,7 +89,7 @@ body{
 /*Frente*/
 .contenidoCard{
     width: 15%;
-    height: 250px;
+    height: 170px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -102,6 +101,31 @@ body{
     cursor: pointer;
 }
 
+.frutaRoja{
+    background: rgb(224,30,55);
+    background: linear-gradient(90deg, rgba(224,30,55,1) 0%, rgba(199,31,55,1) 48%, rgba(189,31,54,1) 97%);
+}
+
+.frutaMorada{
+    background: rgb(157,78,221);
+    background: linear-gradient(90deg, rgba(157,78,221,1) 0%, rgba(199,125,255,1) 48%, rgba(224,170,255,1) 97%);
+}
+
+.frutaVerde{
+    background: rgb(0,128,0);
+background: linear-gradient(90deg, rgba(0,128,0,1) 0%, rgba(112,224,0,1) 48%, rgba(158,240,26,1) 97%);
+}
+
+.frutaNaranja{
+    background: rgb(255,158,0);
+background: linear-gradient(90deg, rgba(255,158,0,1) 0%, rgba(255,170,0,1) 48%, rgba(255,182,0,1) 97%);
+}
+
+.frutaAmarilla{
+    background: rgb(255,208,0);
+background: linear-gradient(90deg, rgba(255,208,0,1) 0%, rgba(255,221,0,1) 48%, rgba(255,234,0,1) 97%);
+}
+
 .contenidoCard .back{
     position: absolute;
     width: 100%;
@@ -111,14 +135,6 @@ body{
 }
 
 
-.imgCard{
-    background-color: #ffc600;
-    border-radius: 50px;
-    margin-bottom: 30px;
-}
-
-
-
 .imgCard img{
     padding: 10px;
     width: 100px;
@@ -126,7 +142,7 @@ body{
 
 .titleCard{
     font-family: "Kode Mono", monospace;
-    color: red;
+    color: white;
     font-weight: bold;
 }
 
