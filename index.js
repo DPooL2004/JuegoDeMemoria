@@ -272,7 +272,7 @@ function animaciones(){
                 let cartaElement = document.querySelector(`[data-value="${carta}"]`);
                 if (cartaElement) {
                     cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.remove("back3");
-                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.add("respaldo");
+                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.add("respaldo2");
                 }
             }
     }
@@ -384,7 +384,6 @@ function animaciones(){
             tarjetaDestapada2 = card9v
         }
         validacion(tarjetaResult1, tarjetaResult2)
-        tarjetasDestapadas.disabled=true
     }
 
     function mostrarCard10(){
