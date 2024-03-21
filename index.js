@@ -249,6 +249,18 @@ function animaciones(){
             aciertos++
             puntaje.innerHTML = aciertos
             tarjetasDestapadas = 0
+            
+            quitarCarta(tarjetaDestapada1)
+            quitarCarta(tarjetaDestapada2)
+
+            function quitarCarta(carta) {
+                // Busca la carta por su valor (data-value)
+                let cartaElement = document.querySelector(`[data-value="${carta}"]`);
+                if (cartaElement) {
+                    cartaElement.querySelector(".contenidoCard img").classList.add("ocultar");
+                    cartaElement.querySelector(".contenidoCard span").classList.add("ocultar");
+                }
+            }
         }else if((tarjetasDestapadas==2)&&(value1 != value2)){
             tarjetasDestapadas = 0
             alert("Son Diferentes")
@@ -275,7 +287,7 @@ function animaciones(){
             tarjetaResult2 = cardText
             tarjetaDestapada2 = cardv
         }
-        validacion(tarjetaResult1, tarjetaResult2, )
+        validacion(tarjetaResult1, tarjetaResult2)
     }
 
     function mostrarCard2(){
@@ -372,6 +384,7 @@ function animaciones(){
             tarjetaDestapada2 = card9v
         }
         validacion(tarjetaResult1, tarjetaResult2)
+        tarjetasDestapadas.disabled=true
     }
 
     function mostrarCard10(){
