@@ -213,7 +213,8 @@ function animaciones(){
             }
             if (tiempo==0){
                 clearInterval(finTime);
-                alert('Se acabo el tiempo!')
+                document.querySelector('.cards').classList.add("ocultar")
+                temporizador.innerHTML = 'Se acabó el tiempo';
             }
         },1000)
     }
