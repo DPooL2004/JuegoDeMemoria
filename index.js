@@ -78,7 +78,14 @@ let card14v = document.getElementById('Card14').dataset.value
 let card15v = document.getElementById('Card15').dataset.value
 let card16v = document.getElementById('Card16').dataset.value
 
+let tarjetaID = null
+let tarjetaID2 = null
+
 boton.addEventListener('click', Jugar)
+
+function ponerFondo(imagen){
+    imagen.classList.toggle("respaldo")
+}
 
 
 let tiempodeEspera = 4
@@ -87,9 +94,6 @@ function Jugar(){
     finTime = setInterval(()=>{
         tiempodeEspera--;
         if (tiempodeEspera == 3){
-            function ponerFondo(imagen){
-                imagen.classList.toggle("respaldo")
-            }
             ponerFondo(imagen)
             ponerFondo(imagen2)
             ponerFondo(imagen3)
@@ -163,31 +167,24 @@ function animaciones(){
         imagen9.classList.add("back3")
     }
     function quitarFondo10(){
-    
         imagen10.classList.add('back3')
     }
     function quitarFondo11(){
-    
         imagen11.classList.add("back3")
     }
     function quitarFondo12(){
-    
         imagen12.classList.add('back3')
     }
     function quitarFondo13(){
-    
         imagen13.classList.add("back3")
     }
     function quitarFondo14(){
-    
         imagen14.classList.add('back3')
     }
     function quitarFondo15(){
-    
         imagen15.classList.add("back3")
     }
     function quitarFondo16(){
-    
         imagen16.classList.add('back3')
     }
 
@@ -246,36 +243,69 @@ function animaciones(){
 
     function validacion(value1, value2){
 
-        if((tarjetasDestapadas==2)&&(value1 == value2)){
-            aciertos++
-            puntaje.innerHTML = aciertos
-            tarjetasDestapadas = 0
-            
-            quitarCarta(tarjetaDestapada1)
-            quitarCarta(tarjetaDestapada2)
 
-            function quitarCarta(carta) {
-                // Busca la carta por su valor (data-value)
-                let cartaElement = document.querySelector(`[data-value="${carta}"]`);
-                if (cartaElement) {
-                    cartaElement.querySelector(".contenidoCard img").classList.add("ocultar");
-                    cartaElement.querySelector(".contenidoCard span").classList.add("ocultar");
+        
+
+
+        
+        if(tarjetasDestapadas==2){
+
+            if(value1 == value2){
+                function validarMismaCarta(carta){
+                    if(tarjetasDestapadas==1){{
+                        
+                        
+                    }}
                 }
+
+                let cartaElemento = document.querySelector(`[data-value="${tarjetaDestapada1}"]`).id;
+                let cartaElemento2 = document.querySelector(`[data-value="${tarjetaDestapada2}"]`).id;
+
+                if (cartaElemento != cartaElemento2){
+                    aciertos++
+                    puntaje.innerHTML = aciertos
+                    tarjetasDestapadas = 0
+
+                    console.log("id1: "+ cartaElemento)
+                    console.log("id2: "+ cartaElemento2)
+                    
+                    quitarCarta(tarjetaDestapada1)
+                    quitarCarta(tarjetaDestapada2)
+                }else{
+                    console.log("id1: "+ cartaElemento)
+                    console.log("id2: "+ cartaElemento2)
+                    PonerFondoOtraVez(tarjetaDestapada1)
+                    alert("No puedes clickear la misma carta.")
+                    tarjetasDestapadas = 0
+                }
+
+                function quitarCarta(carta) {
+                    // Busca la carta por su valor (data-value)
+                    let cartaElement = document.querySelector(`[data-value="${carta}"]`);
+                    if (cartaElement) {
+                        cartaElement.querySelector(".contenidoCard img").classList.add("ocultar");
+                        cartaElement.querySelector(".contenidoCard span").classList.add("ocultar");
+                    }
+                }
+
+            }else if(value1 != value2){
+                tarjetasDestapadas = 0
+                alert("Son Diferentes")
+                PonerFondoOtraVez(tarjetaDestapada1)
+                PonerFondoOtraVez(tarjetaDestapada2)
             }
-        }else if((tarjetasDestapadas==2)&&(value1 != value2)){
-            tarjetasDestapadas = 0
-            alert("Son Diferentes")
-            quitarFondoDeLaCarta(tarjetaDestapada1)
-            quitarFondoDeLaCarta(tarjetaDestapada2)
         }
-            function quitarFondoDeLaCarta(carta) {
-                // Busca la carta por su valor (data-value)
-                let cartaElement = document.querySelector(`[data-value="${carta}"]`);
-                if (cartaElement) {
-                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.remove("back3");
-                    cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.add("respaldo2");
-                }
-            }
+
+            
+    }
+
+    function PonerFondoOtraVez(carta) {
+        // Busca la carta por su valor (data-value)
+        let cartaElement = document.querySelector(`[data-value="${carta}"]`);
+        if (cartaElement) {
+            cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.remove("back3");
+            cartaElement.querySelector(".contenidoCard img:nth-child(2)").classList.add("respaldo2");
+        }
     }
 
     function mostrarCard(){
